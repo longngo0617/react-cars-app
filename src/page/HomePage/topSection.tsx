@@ -4,6 +4,7 @@ import tw from "twin.macro";
 import MclarenCarImg from "../../assets/images/mclaren-orange-big.png";
 import BlobImg from "../../assets/images/blob.svg";
 import { SCREENS } from "../../responsive";
+import { Button } from "../../components/button";
 
 const TopSectionContainer = styled.div`
   min-height: 400px;
@@ -150,6 +151,8 @@ export const TopSection: React.FC<topSectionProps> = () => {
           at the best price for you and get the best quality cars for as long as
           you like
         </Description>
+        <Button text="Book Your Ride" />
+        <Button theme="outlined" text="Sell Your Car" />
       </LeftContainer>
       <RightContainer>
         <BlobContainer>
