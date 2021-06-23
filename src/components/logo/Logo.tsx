@@ -1,5 +1,5 @@
 import React from "react";
-import CarLogoImg from "../assets/images/car-logo.png";
+import CarLogoImg from "../../assets/images/car-logo.png";
 import styled from "styled-components";
 import tw from "twin.macro";
 
