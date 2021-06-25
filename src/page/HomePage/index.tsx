@@ -4,6 +4,7 @@ import tw from "twin.macro";
 import { BookCard } from "../../components/bookCard";
 import { Marginer } from "../../components/marginer";
 import { NavBar } from "../../components/navbar/NavBar";
+import { BookingSteps } from "./bookingSteps";
 import { TopSection } from "./topSection";
 
 const PageContainer = styled.div`
@@ -20,10 +21,14 @@ overflow-x-hidden
 interface HomePageProps {}
 
 export const HomePage: React.FC<HomePageProps> = () => {
-  return <PageContainer>
-      <NavBar/>
-      <TopSection/>
-      <Marginer direction="vertical" margin="4em"/>
-      <BookCard/>
-  </PageContainer>;
+  return (
+    <PageContainer>
+      <NavBar />
+      <TopSection />
+      <Marginer direction="vertical" margin="4em" />
+      <BookCard />
+      <Marginer direction="vertical" margin="8em" />
+      <BookingSteps/>
+    </PageContainer>
+  );
 };
