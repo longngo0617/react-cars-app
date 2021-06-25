@@ -6,6 +6,7 @@ import { Marginer } from "../../components/marginer";
 import { NavBar } from "../../components/navbar/NavBar";
 import { AboutUs } from "./aboutUs";
 import { BookingSteps } from "./bookingSteps";
+import { TopCars } from "./topCars";
 import { TopSection } from "./topSection";
 
 const PageContainer = styled.div`
@@ -32,6 +33,8 @@ export const HomePage: React.FC<HomePageProps> = () => {
       <BookingSteps/>
       <Marginer direction="vertical" margin="8em" />
       <AboutUs/>
+      <Marginer direction="vertical" margin="8em" />
+      <TopCars/>
     </PageContainer>
   );
 };

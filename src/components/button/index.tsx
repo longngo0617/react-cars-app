@@ -5,31 +5,32 @@ import tw from "twin.macro";
 interface ButtonProps {
   theme?: "filled" | "outlined";
   text: string;
+  className?: string;
 }
 
 const BaseButton = styled.button`
   ${tw`
        pl-5
-       pr-5
-       pt-3
-       pb-3
-       outline-none
-       rounded-md
-       text-white
-       text-xs
-       font-semibold
-       border-transparent
-       border-2
-       border-solid
-       focus:outline-none
-       transition-all
-       duration-200
-       ease-in-out
-       m-1
+    pr-5
+    pt-3
+    pb-3
+    outline-none
+    rounded-md
+    text-white
+    text-xs
+    font-semibold
+    border-transparent
+    border-2
+    border-solid
+    focus:outline-none
+    transition-all
+    duration-200
+    ease-in-out
+    m-1
     `};
 `;
 
-const OutlineButton = styled(BaseButton)`
+const FilledButton = styled(BaseButton)`
   ${tw`
         bg-red-500
         hover:bg-transparent
@@ -37,7 +38,7 @@ const OutlineButton = styled(BaseButton)`
         hover:border-red-500
     `}
 `;
-const FilledButton = styled(BaseButton)`
+const OutlineButton = styled(BaseButton)`
   ${tw`
         border-red-500
         text-red-500
@@ -48,8 +49,7 @@ const FilledButton = styled(BaseButton)`
     `}
 `;
 
-export const Button: React.FC<ButtonProps> = ({ theme, text }) => {
-  if (theme === "outlined") return <FilledButton>{text}</FilledButton>;
-
-  return <OutlineButton>{text}</OutlineButton>;
+export const Button: React.FC<ButtonProps> = ({ theme, text, className }) => {
+  if (theme === "outlined") return <OutlineButton className={className}>{text}</OutlineButton>;
+  else return <FilledButton className={className}>{text}</FilledButton>;
 };
