@@ -4,6 +4,7 @@ import tw from "twin.macro";
 import { BookCard } from "../../components/bookCard";
 import { Marginer } from "../../components/marginer";
 import { NavBar } from "../../components/navbar/NavBar";
+import { AboutUs } from "./aboutUs";
 import { BookingSteps } from "./bookingSteps";
 import { TopSection } from "./topSection";
 
@@ -27,8 +28,10 @@ export const HomePage: React.FC<HomePageProps> = () => {
       <TopSection />
       <Marginer direction="vertical" margin="4em" />
       <BookCard />
-      <Marginer direction="vertical" margin="8em" />
+      <Marginer direction="vertical" margin="10em" />
       <BookingSteps/>
+      <Marginer direction="vertical" margin="8em" />
+      <AboutUs/>
     </PageContainer>
   );
 };
